@@ -18,3 +18,4 @@ Want to override some configuration and still want updates? Put it in ~/.zsh/cus
 * lspath - show ls -ld for all dirs on path to given file
 * .zsh/custom - want add aliases for your ssh or change prompt and still be able to painlessly update? do your customizations here
 * nice prompt
+* [RVM](http://rvm.beginrescueend.com/) support

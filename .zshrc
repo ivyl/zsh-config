@@ -1,4 +1,4 @@
-. ~/.rvm/scripts/rvm
+[ -e  ~/.rvm/scripts/rvm ] &&. ~/.rvm/scripts/rvm
 [ -z "$PS1" ] && return
 
 . ~/.zsh/config
