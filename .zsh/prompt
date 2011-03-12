@@ -1,0 +1,3 @@
+. ~/.zsh/colors
+
+PROMPT="${at_bold}${fg_dgray}[ ${fg_red}%n ${fg_white}%~ ${fg_dgray}] ${fg_white}\$${at_normal} "

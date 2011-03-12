@@ -1,0 +1,25 @@
+#LS
+alias ls='ls --color=auto'
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+
+#EDITORS
+alias g='gedit'
+alias e='vim'
+alias vi='vim'
+
+#COLORFULNESS
+alias grep="grep --colour"
+
+#NO CORRECTION for those
+alias mv='nocorrect mv'       # no spelling correction on mv
+alias cp='nocorrect cp'       # no spelling correction on cp
+alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+
+#DIRS
+alias -g ...='../../'           #cd ...
+alias -g ....='../../../'       #cd ....
+alias -g .....='../../../../'   #cd .....
+
+#reload configuration
+alias refresh='source ~/.zshrc'
