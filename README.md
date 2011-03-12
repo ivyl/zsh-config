@@ -10,6 +10,7 @@ Want to override some configuration and still want updates? Put it in ~/.zsh/cus
 ##installation
 Just copy .zsh/ and .zshrc to ~
 or run install.sh
+Do not forget to change your default shell (chsh command).
 
 ##What is done?
 * HOME, END, DEL, INSERT work as you would expect.
