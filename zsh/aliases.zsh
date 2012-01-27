@@ -11,6 +11,9 @@ alias vi='vim'
 #COLORFULNESS
 alias grep="grep --colour"
 
+#no vim to .vim corretion and expandig of aliases after sudo (tailing space)
+alias sudo='nocorrect sudo '
+
 #NO CORRECTION for those
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
