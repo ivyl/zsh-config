@@ -8,8 +8,7 @@ I am using [most](http://www.jedsoft.org/most/) as a pager and [vim](http://www.
 Want to override some configuration and still want updates? Put it in ~/.zsh/custom. It won't be overwritten.
 
 ##installation
-Just copy .zsh/ and .zshrc to ~
-or run install.sh
+Just clone to .zsh/ and link ~/.zshrc to ~/.zsh/zshrc
 Do not forget to change your default shell (chsh command).
 
 ##What is done?
