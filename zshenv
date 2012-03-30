@@ -1,3 +1,6 @@
 [ -e  ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
-[ -e  ~/.rbenv ] && export PATH="$HOME/.rbenv/bin:$PATH"
+if [ -e  ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
