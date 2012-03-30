@@ -8,7 +8,7 @@ I am using [most](http://www.jedsoft.org/most/) as a pager and [vim](http://www.
 Want to override some configuration and still want updates? Put it in ~/.zsh/custom. It won't be overwritten.
 
 ##installation
-Just clone to .zsh/ and link ~/.zshrc to ~/.zsh/zshrc
+Just clone to .zsh/ and link ~/.zshrc to ~/.zsh/zshrc and ~/.zshenv to ~/.zsh/zshenv
 Do not forget to change your default shell (chsh command).
 
 ##What is done?
@@ -24,3 +24,4 @@ Do not forget to change your default shell (chsh command).
 * .zsh/custom - want add aliases for your ssh or change prompt and still be able to painlessly update? do your customizations here
 * nice prompt
 * [RVM](http://rvm.beginrescueend.com/) support
+* [rbenv](https://github.com/sstephenson/rbenv) support

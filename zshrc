@@ -1,5 +1,3 @@
-[ -e  ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
-
 if [ "$TERM" = "xterm" ]; then
   if [ -e /usr/share/terminfo/x/xterm-256color ]; then
     export TERM='xterm-256color'
@@ -17,3 +15,5 @@ fi
 . ~/.zsh/aliases.zsh
 . ~/.zsh/prompt.zsh
 [ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
