@@ -28,3 +28,16 @@ alias -g .....='../../../../'   #cd .....
 
 #reload configuration
 alias refresh='source ~/.zshrc'
+alias treload="xrdb -merge ~/.Xresources"
+
+#sprunge paste service
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+
+#opening
+alias o="xdg-open"
+
+#common arch aliases
+alias y=yaourt
+alias yn="y --noconfirm"
+alias rc.d="sudo rc.d"
+
