@@ -7,6 +7,7 @@ alias ll='ls -lh'
 #EDITORS
 alias e='vim'
 alias vi='vim'
+alias v="gvim --remote-silent"
 
 #COLORFULNESS
 alias grep="grep --colour"
@@ -29,6 +30,9 @@ alias -g .....='../../../../'   #cd .....
 #reload configuration
 alias refresh='source ~/.zshrc'
 alias treload="xrdb -merge ~/.Xresources"
+
+#launch another rxvt
+alias t="nohup urxvt 2&> /dev/null > /dev/null &"
 
 #sprunge paste service
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
