@@ -23,7 +23,7 @@ unset beep
 set nobeep
 
 
-bindkey -e
+bindkey -v
 
 #LOAD PROFILE
 if [ -x /etc/profile ]; then
