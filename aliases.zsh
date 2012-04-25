@@ -44,4 +44,5 @@ alias o="xdg-open"
 alias y=yaourt
 alias yn="y --noconfirm"
 alias rc.d="sudo rc.d"
+alias rfkill="sudo rfkill"
 
