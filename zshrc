@@ -14,6 +14,11 @@ fi
 . ~/.zsh/functions.zsh
 . ~/.zsh/aliases.zsh
 . ~/.zsh/prompt.zsh
-[ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[ -e  ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
+if [ -e  ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+[ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
