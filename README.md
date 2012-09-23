@@ -14,6 +14,7 @@ Do not forget to change your default shell (chsh command).
 ##What is done?
 * HOME, END, DEL, INSERT work as you would expect.
 * PAGEUP, PAGEDOWN launches history search
+* zmv enabled
 * cd ...  as ../.. and cd .... as ../../.. (actually ... is global alias, it does not narrow only to cd, try with ls).
 * TAB completion, first pus shows possibilities, next pushes cycles through them
 * Autocorrection - type vim RAEDME.md and shell will prompt you about correction, also works with tab-ing dirs.

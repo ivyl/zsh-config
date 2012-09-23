@@ -8,6 +8,24 @@ setopt LIST_TYPES
 setopt COMPLETE_IN_WORD
 unlimit
 
+pids4kill() {                                                                                                    
+  local -a ps
+ 
+  if [[ $oldcontext = *:sudo:* ]]
+  then
+    local u=$opt_args[-u]
+    if [[ -n $u ]]
+    then
+      ps=(ps -u $u)
+    else
+      ps=(ps -A)
+    fi
+  else
+    ps=(ps -u $USER)
+  fi
+  $ps -o pid,%cpu,tty,cputime,cmd
+}
+
 man_glob () {
   local a
   read -cA a
@@ -37,6 +55,8 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command pids4kill
 zstyle ':completion:::::' completer _complete _approximate
 zstyle ':completion:*:approximate:*' max-errors 2
 zstyle :compinstall filename '/home/james/.zshrc'

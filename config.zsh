@@ -58,3 +58,5 @@ bindkey "^[[F"  end-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[OF" end-of-line
 
+#loading functions
+autoload -Uz zmv
