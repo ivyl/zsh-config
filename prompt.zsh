@@ -18,10 +18,29 @@ precmd () {
  
 setopt prompt_subst
 
-#PROMPT="${at_bold}${fg_dgray}[ ${fg_red}%n ${fg_white}%~ ${fg_dgray}] ${fg_white}\$${at_normal} "
 
-#prompt with hostname (old, simple)
-#PROMPT="${at_bold}${fg_dgray}[ ${fg_red}%n${fg_white}@%m %~\${vcs_info_msg_0_} ${fg_dgray}] ${fg_white}\$${at_normal} "
-
-#new testing prompt version
 PROMPT="${at_bold}%m ${fg_red}%n ${fg_blue}%c\${vcs_info_msg_0_} %(?/${at_normal}/${fg_red})%%${at_normal} "
+
+
+# change cursor color basing on vi mode
+zle-keymap-select () {
+  if [ $KEYMAP = vicmd ]; then
+    if [[ $TMUX = '' ]]; then
+      echo -ne "\033]12;Red\007"
+    else
+      printf '\033Ptmux;\033\033]12;red\007\033\\'
+    fi
+  else
+    if [[ $TMUX = '' ]]; then
+      echo -ne "\033]12;Grey\007"
+    else
+      printf '\033Ptmux;\033\033]12;grey\007\033\\'
+    fi
+  fi
+}
+zle-line-init () {
+  zle -K viins
+  echo -ne "\033]12;Grey\007"
+}
+zle -N zle-keymap-select
+zle -N zle-line-init
