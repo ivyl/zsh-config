@@ -44,6 +44,7 @@ compctl -k hostnames ping telnet ftp nslookup ssh traceroute mtr scp ncftp
 compctl -c .
 
 
+ZSHCAHCEDIR=/tmp/$USER-zsh-cache
 
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' expand prefix suffix
@@ -52,7 +53,7 @@ zstyle ':completion:*' list-suffixes true
 zstyle ':completion:*' matcher-list '' '+m:{a-z}={A-Z}' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' cache-path $ZSHCAHCEDIR
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
@@ -65,7 +66,7 @@ zstyle ':completion::prefix-1:*' completer _complete
 zstyle ':completion:incremental:*' completer _complete _correct
 zstyle ':completion:predict:*' completer _complete # Completion caching
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST # Expand partial paths
+zstyle ':completion::complete:*' cache-path $ZSHCAHCEDIR/$HOST # Expand partial paths
 zstyle ':completion:*' expand 'yes'
 zstyle ':completion:*' squeeze-slashes 'yes' # Include non-hidden directories in globbed file completions
 zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~' # Separate matches into groups
