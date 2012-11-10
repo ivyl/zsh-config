@@ -37,10 +37,10 @@ PATH="$PATH:$HOME/.bin"
 
 
 #EXPORTS
-export PAGER='most'
+export PAGER='less'
 export EDITOR='vim'
 export VISUAL='vim'
-export LESS=-cex3M
+export LESS=-cex3MR
 
 
 #OLD KEYS since we used to it

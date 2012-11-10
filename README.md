@@ -2,7 +2,7 @@
 My zsh configuration files. Should be reusable.
 
 ## Requirements
-I am using [most](http://www.jedsoft.org/most/) as a pager and [vim](http://www.vim.org/) as default editor. Rest shoud be reusable.
+I am using less as a pager and [vim](http://www.vim.org/) as default editor. Rest shoud be reusable.
 
 ## Own configuration
 Want to override some configuration and still want updates? Put it in ~/.zsh/custom. It won't be overwritten.
