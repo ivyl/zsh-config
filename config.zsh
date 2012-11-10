@@ -42,21 +42,5 @@ export EDITOR='vim'
 export VISUAL='vim'
 export LESS=-cex3MR
 
-
-#OLD KEYS since we used to it
-#del
-bindkey '^?' backward-delete-char
-bindkey "^[[3~" delete-char
-bindkey "^[3;5~" delete-char
-bindkey "\e[3~" delete-char
-#home
-bindkey "^[[H" beginning-of-line
-bindkey "^[[1~" beginning-of-line
-bindkey "^[OH" beginning-of-line
-#end
-bindkey "^[[F"  end-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[OF" end-of-line
-
 #loading functions
 autoload -Uz zmv
