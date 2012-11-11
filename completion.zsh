@@ -60,14 +60,13 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command pids4kill
 zstyle ':completion:::::' completer _complete _approximate
 zstyle ':completion:*:approximate:*' max-errors 2
-zstyle :compinstall filename '/home/james/.zshrc'
 zstyle ':completion:*' completer _complete _prefix
 zstyle ':completion::prefix-1:*' completer _complete
 zstyle ':completion:incremental:*' completer _complete _correct
 zstyle ':completion:predict:*' completer _complete # Completion caching
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSHCAHCEDIR/$HOST # Expand partial paths
-zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*' squeeze-slashes 'yes' # Include non-hidden directories in globbed file completions
 zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~' # Separate matches into groups
 zstyle ':completion:*:matches' group 'yes' # Describe each match group.
