@@ -15,6 +15,7 @@ Do not forget to change your default shell (chsh command).
 
 ### Keybinding
 * vi mode
+* ctrl-p ctrl-n history navigation
 
 ### Prompt
 * nice and sleek

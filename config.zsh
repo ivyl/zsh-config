@@ -10,7 +10,6 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt hist_verify
 setopt hist_allow_clobber
-#setopt share_history
 
 #ZSH OPTS
 setopt extendedglob
@@ -23,7 +22,12 @@ unset beep
 set nobeep
 
 
+#vi mode
 bindkey -v
+
+#ctrl-p ctrl-n history navigation
+bindkey '^P' up-history
+bindkey '^N' down-history
 
 #LOAD PROFILE
 if [ -x /etc/profile ]; then
