@@ -44,7 +44,7 @@ PATH="$PATH:$HOME/.bin"
 export PAGER='less'
 export EDITOR='vim'
 export VISUAL='vim'
-export LESS=-cex3MR
+export LESS=-ex3MRXSF
 
 #loading functions
 autoload -Uz zmv
