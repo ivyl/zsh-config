@@ -38,9 +38,17 @@ zle-keymap-select () {
     fi
   fi
 }
+zle-line-finish() {
+  if [[ $TMUX = '' ]]; then
+    echo -ne "\033]12;Grey\007"
+  else
+    printf '\033Ptmux;\033\033]12;grey\007\033\\'
+  fi
+}
 zle-line-init () {
   zle -K viins
   echo -ne "\033]12;Grey\007"
 }
 zle -N zle-keymap-select
 zle -N zle-line-init
+zle -N zle-line-finish
