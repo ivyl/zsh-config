@@ -29,6 +29,11 @@ bindkey -v
 bindkey '^P' up-history
 bindkey '^N' down-history
 
+#backspace working even after returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+
 #LOAD PROFILE
 if [ -x /etc/profile ]; then
     setopt -G
