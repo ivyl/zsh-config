@@ -33,6 +33,9 @@ bindkey '^N' down-history
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
+#ctrl-w removed word backwards
+bindkey '^w' backward-delete-word
+
 
 #LOAD PROFILE
 if [ -x /etc/profile ]; then
