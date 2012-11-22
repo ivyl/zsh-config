@@ -18,9 +18,6 @@ alias -g ...='../../'           #cd ...
 alias -g ....='../../../'       #cd ....
 alias -g .....='../../../../'   #cd .....
 
-#reload configuration
-alias refresh='source ~/.zshrc'
-
 #sprunge paste service
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
