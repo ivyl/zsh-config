@@ -26,5 +26,7 @@ alias y="yaourt"
 alias yn="y --noconfirm"
 alias rfkill="sudo rfkill"
 alias sc="systemctl"
+
 alias uu="udiskie-umount"
+alias detach="udisks --detach"
 
