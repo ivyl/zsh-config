@@ -12,9 +12,10 @@ setopt hist_verify
 setopt hist_allow_clobber
 
 #ZSH OPTS
+setopt noclobber
 setopt extendedglob
 setopt correct correctall
-setopt autocd autolist
+setopt autolist
 setopt auto_resume
 setopt short_loops #for file in *.pdf; lp ${file}
 
@@ -24,7 +25,6 @@ set nobeep
 
 #vi mode
 bindkey -v
-
 #ctrl-p ctrl-n history navigation
 bindkey '^P' up-history
 bindkey '^N' down-history

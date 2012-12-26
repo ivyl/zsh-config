@@ -2,10 +2,10 @@ autoload -Uz compinit
 compinit
 
 # Get completion above command line
-setopt NOALWAYSLASTPROMPT
-setopt NOAUTO_REMOVE_SLASH
-setopt LIST_TYPES
-setopt COMPLETE_IN_WORD
+setopt noalwayslastprompt
+setopt noauto_remove_slash
+setopt list_types
+setopt complete_in_word
 unlimit
 
 pids4kill() {                                                                                                    
@@ -43,7 +43,6 @@ compctl -k hostnames ping telnet ftp nslookup ssh traceroute mtr scp ncftp
 # Complete commmands after .
 compctl -c .
 
-
 ZSHCAHCEDIR=/tmp/$USER-zsh-cache
 
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -75,5 +74,4 @@ zstyle ':completion:*:messages' format '%B%U---- %d%u%b'
 zstyle ':completion:*:warnings' format '%B%U---- no match for: %d%u%b' # Describe options in full
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description '%d'
-
 
