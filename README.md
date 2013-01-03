@@ -24,7 +24,6 @@ Do not forget to change your default shell (chsh command).
 ### Functions
 * zmv enabled
 * lspath - show ls -ld for all dirs on path to given file
-* refresh - reload you configuration without messing with restarting shell
 * few aliases (see in files, example: e and vi lauches vim, la stands for ls with some options, etc.)
 
 ### Features
@@ -36,4 +35,4 @@ Do not forget to change your default shell (chsh command).
 * [rbenv](https://github.com/sstephenson/rbenv) support
 
 ### Machine based customization
-* .zsh/custom - want add aliases for your ssh or change prompt and still be able to painlessly update? do your customizations here
+* .zsh/custom.zsh - want add aliases for your ssh or change prompt and still be able to painlessly update? do your customizations here
