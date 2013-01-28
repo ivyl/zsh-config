@@ -21,34 +21,35 @@ setopt prompt_subst
 
 PROMPT="${at_bold}%m ${fg_red}%n ${fg_blue}%c\${vcs_info_msg_0_} %(?/${at_normal}/${fg_red})%%${at_normal} "
 
+INSERT_PROMPT="gray"
+COMMAND_PROMPT="red"
+
+set_prompt_color() {
+    if [[ $TMUX = '' ]]; then
+        echo -ne "\033]12;$1\007"
+    else
+        printf '\033Ptmux;\033\033]12;%b\007\033\\' "$1"
+    fi
+}
 
 # change cursor color basing on vi mode
 zle-keymap-select () {
-  if [ $KEYMAP = vicmd ]; then
-    if [[ $TMUX = '' ]]; then
-      echo -ne "\033]12;Red\007"
+    if [ $KEYMAP = vicmd ]; then
+        set_prompt_color $COMMAND_PROMPT
     else
-      printf '\033Ptmux;\033\033]12;red\007\033\\'
+        set_prompt_color $INSERT_PROMPT
     fi
-  else
-    if [[ $TMUX = '' ]]; then
-      echo -ne "\033]12;Grey\007"
-    else
-      printf '\033Ptmux;\033\033]12;grey\007\033\\'
-    fi
-  fi
 }
+
 zle-line-finish() {
-  if [[ $TMUX = '' ]]; then
-    echo -ne "\033]12;Grey\007"
-  else
-    printf '\033Ptmux;\033\033]12;grey\007\033\\'
-  fi
+    set_prompt_color $INSERT_PROMPT
 }
+
 zle-line-init () {
-  zle -K viins
-  echo -ne "\033]12;Grey\007"
+    zle -K viins
+    set_prompt_color $INSERT_PROMPT
 }
+
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
