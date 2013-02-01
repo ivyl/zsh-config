@@ -1,5 +1,11 @@
 #LS
-alias ls='ls --color=auto'
+case "$(uname)" in
+	Linux)
+		alias ls='ls --color=auto' ;;
+	FreeBSD)
+		alias ls='ls -G' ;;
+esac
+
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 
