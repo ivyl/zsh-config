@@ -22,21 +22,6 @@ setopt short_loops #for file in *.pdf; lp ${file}
 unset beep
 set nobeep
 
-
-#vi mode
-bindkey -v
-#ctrl-p ctrl-n history navigation
-bindkey '^P' up-history
-bindkey '^N' down-history
-
-#backspace working even after returning from command mode
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-
-#ctrl-w removed word backwards
-bindkey '^w' backward-delete-word
-
-
 #LOAD PROFILE
 if [ -x /etc/profile ]; then
     setopt -G
@@ -65,3 +50,4 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 #loading functions
 autoload -Uz zmv
+
