@@ -12,6 +12,7 @@ bindkey '^h' backward-delete-char
 #ctrl-w removed word backwards
 bindkey '^w' backward-delete-word
 
+#ctrl-f edit current buffer in editor
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^f' edit-command-line
