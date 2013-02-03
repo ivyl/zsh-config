@@ -1,9 +1,9 @@
 #LS
 case "$(uname)" in
-	Linux)
-		alias ls='ls --color=auto' ;;
-	FreeBSD)
-		alias ls='ls -G' ;;
+    Linux)
+        alias ls='ls --color=auto' ;;
+    FreeBSD)
+        alias ls='ls -G' ;;
 esac
 
 alias l='ls -lFh'     #size,show type,human readable

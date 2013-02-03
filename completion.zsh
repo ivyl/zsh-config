@@ -9,33 +9,33 @@ setopt complete_in_word
 unlimit
 
 pids4kill() {                                                                                                    
-  local -a ps
- 
-  if [[ $oldcontext = *:sudo:* ]]
-  then
-    local u=$opt_args[-u]
-    if [[ -n $u ]]
+    local -a ps
+
+    if [[ $oldcontext = *:sudo:* ]]
     then
-      ps=(ps -u $u)
+        local u=$opt_args[-u]
+        if [[ -n $u ]]
+        then
+            ps=(ps -u $u)
+        else
+            ps=(ps -A)
+        fi
     else
-      ps=(ps -A)
+        ps=(ps -u $USER)
     fi
-  else
-    ps=(ps -u $USER)
-  fi
-  $ps -o pid,%cpu,tty,cputime,cmd
+    $ps -o pid,%cpu,tty,cputime,cmd
 }
 
 man_glob () {
-  local a
-  read -cA a
-  if [[ $a[2] = [0-9]* ]] then	# BSD section number
-    reply=( $^manpath/man$a[2]/$1*$2(N:t:r) )
-  elif [[ $a[2] = -s ]] then	# SysV section number
-    reply=( $^manpath/man$a[3]/$1*$2(N:t:r) )
-  else
-    reply=( $^manpath/man*/$1*$2(N:t:r) )
-  fi
+    local a
+    read -cA a
+    if [[ $a[2] = [0-9]* ]] then  # BSD section number
+        reply=( $^manpath/man$a[2]/$1*$2(N:t:r) )
+    elif [[ $a[2] = -s ]] then    # SysV section number
+        reply=( $^manpath/man$a[3]/$1*$2(N:t:r) )
+    else
+        reply=( $^manpath/man*/$1*$2(N:t:r) )
+    fi
 }
 compctl -K man_glob man
 compctl -k hostnames ping telnet ftp nslookup ssh traceroute mtr scp ncftp
