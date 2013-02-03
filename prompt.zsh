@@ -6,6 +6,7 @@ zstyle ':vcs_info:*' unstagedstr "${fg_brown}?"
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 zstyle ':vcs_info:*' enable git svn
+
 precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
         zstyle ':vcs_info:*' formats "${at_normal} ${fg_dgray}%b%c%u${at_normal}"
@@ -25,10 +26,12 @@ INSERT_PROMPT="gray"
 COMMAND_PROMPT="red"
 
 set_prompt_color() {
-    if [[ $TMUX = '' ]]; then
-        echo -ne "\033]12;$1\007"
-    else
+    if [[ $TERM = "linux" ]]; then
+        # nothing
+    elif [[ $TMUX != '' ]]; then
         printf '\033Ptmux;\033\033]12;%b\007\033\\' "$1"
+    else
+        echo -ne "\033]12;$1\007"
     fi
 }
 
