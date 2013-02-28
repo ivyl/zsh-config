@@ -34,3 +34,5 @@ alias sc="systemctl"
 alias uu="udiskie-umount"
 alias detach="udisks --detach"
 
+alias wi="wicd-cli"
+
