@@ -21,12 +21,13 @@ Do not forget to change your default shell (chsh command).
 * nice and sleek
 * currsor changes color when not in inser mode (works in tmux!)
 
-### Functions
+### Usable functions
 * zmv enabled
 * lspath - show ls -ld for all dirs on path to given file
 * few aliases (see in files, example: e and vi lauches vim, la stands for ls with some options, etc.)
 
 ### Features
+* ETIME variable contains execution time of last command in seconds.
 * TAB completion, first pus shows possibilities, next pushes cycles through them
 * Autocorrection - type vim RAEDME.md and shell will prompt you about correction, also works with tab-ing dirs.
 * ~/.bin is added to your PATH

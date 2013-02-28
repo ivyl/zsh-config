@@ -1,3 +1,4 @@
+# USABLE FUNCTIONS
 #display ls -ld for each directory leading to file we given, from someone's .zshrc
 lspath () {
     if [ "$1" = "${1##/}" ]; then
@@ -16,3 +17,17 @@ lspath () {
         allpaths=($allpaths[@] $filepath) 
         ls -ld "$allpaths[@]"
 }
+
+
+# HOOKS, INTERNALS, ETC
+etime_preexec() {
+    _LAUNCH_TIME=$SECONDS
+}
+
+etime_precmd() {
+    ETIME=$((SECONDS-_LAUNCH_TIME))
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook preexec etime_preexec
+add-zsh-hook precmd etime_precmd
