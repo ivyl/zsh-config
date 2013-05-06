@@ -31,3 +31,6 @@ export PERL5LIB="~/.perl5/lib/perl5:$PERL5LIB";
 export PATH="$PATH:~/.perl5/bin";
 
 [ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
+
+# newly opened terminal should clean prompt
+true
