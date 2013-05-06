@@ -1,3 +1,4 @@
+# xterm hack for some terminals to support 256 colors
 if [ "$TERM" = "xterm" ]; then
   if [ -e /usr/share/terminfo/x/xterm-256color ]; then
     export TERM='xterm-256color'
@@ -5,7 +6,6 @@ if [ "$TERM" = "xterm" ]; then
     export TERM='xterm-color'
   fi
 fi
-
 
 [ -z "$PS1" ] && return
 
