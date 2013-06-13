@@ -31,6 +31,8 @@ alias p="packer"
 alias pm="sudo pacman"
 alias sc="systemctl"
 
+alias logs="sudo journalctl -f"
+
 alias uu="udiskie-umount"
 alias detach="udisks --detach"
 
