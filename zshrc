@@ -23,6 +23,12 @@ if [ -e  ~/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+export WORKON_HOME=~/.pyenv
+if [ -e /usr/bin/virtualenvwrapper_lazy.sh ]; then
+    source /usr/bin/virtualenvwrapper_lazy.sh
+fi
+
 # CPAN
 export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:~/.perl5";
 export PERL_MB_OPT="--install_base ~/.perl5";
