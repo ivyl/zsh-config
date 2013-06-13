@@ -27,8 +27,7 @@ alias -g .....='../../../../'   #cd .....
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 #common arch aliases
-alias p="packer"
-alias pm="sudo pacman"
+alias p="pacwrap"
 alias sc="systemctl"
 
 alias logs="sudo journalctl -f"

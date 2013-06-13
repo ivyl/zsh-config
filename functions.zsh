@@ -28,6 +28,16 @@ etime_precmd() {
     ETIME=$((SECONDS-_LAUNCH_TIME))
 }
 
+pacwrap() {
+    case "$1" in
+        -S*) packer $@ ;;
+        -G*) packer $@ ;;
+        -R*) sudo pacman $@ ;;
+        -U*) sudo pacman $@ ;;
+        *)   pacman $@ ;;
+    esac
+}
+
 autoload -U add-zsh-hook
 add-zsh-hook preexec etime_preexec
 add-zsh-hook precmd etime_precmd
