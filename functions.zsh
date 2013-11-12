@@ -31,7 +31,7 @@ etime_precmd() {
 pacwrap() {
     case "$1" in
         -S|-Syu|-Su|-Ss|-Ssq|-Si|-G) packer $@ ;;
-        -R*|-U*) sudo pacman $@ ;;
+        -R*|-U*|-S*) sudo pacman $@ ;;
         *)   pacman $@ ;;
     esac
 }
