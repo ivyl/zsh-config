@@ -35,5 +35,4 @@ alias logs="sudo journalctl -f"
 alias uu="udiskie-umount"
 alias detach="udisks --detach"
 
-alias wi="wicd-cli"
-
+alias wifi="sudo wifi"
