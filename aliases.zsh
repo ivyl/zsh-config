@@ -36,3 +36,4 @@ alias uu="udiskie-umount"
 alias detach="udisks --detach"
 
 alias wifi="sudo wifi"
+alias bluetooth="sudo bluetooth"
