@@ -18,16 +18,6 @@ lspath () {
         ls -ld "$allpaths[@]"
 }
 
-
-# HOOKS, INTERNALS, ETC
-etime_preexec() {
-    _LAUNCH_TIME=$SECONDS
-}
-
-etime_precmd() {
-    ETIME=$((SECONDS-_LAUNCH_TIME))
-}
-
 pacwrap() {
     case "$1" in
         -S|-Syu|-Su|-Ss|-Ssq|-Si|-G) packer $@ ;;
@@ -36,6 +26,21 @@ pacwrap() {
     esac
 }
 
+
+# HOOKS, INTERNALS, ETC
 autoload -U add-zsh-hook
+
+etime_preexec() {
+    _LAUNCH_TIME=$SECONDS
+}
 add-zsh-hook preexec etime_preexec
+
+etime_precmd() {
+    ETIME=$((SECONDS-_LAUNCH_TIME))
+}
 add-zsh-hook precmd etime_precmd
+
+bell_precmd() {
+    echo -ne "\a"
+}
+add-zsh-hook precmd bell_precmd
