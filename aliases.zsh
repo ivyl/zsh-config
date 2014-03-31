@@ -37,3 +37,7 @@ alias detach="udisks --detach"
 
 alias wifi="sudo wifi"
 alias bluetooth="sudo bluetooth"
+alias wwan="sudo wwan"
+
+alias suspend="slimlock & sc suspend"
+alias hibernate="slimlock & sc hibernate"
