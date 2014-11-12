@@ -14,7 +14,7 @@ setopt hist_allow_clobber
 #ZSH OPTS
 setopt noclobber
 setopt extendedglob
-setopt correct correctall
+setopt correct
 setopt autolist
 setopt auto_resume
 setopt short_loops #for file in *.pdf; lp ${file}

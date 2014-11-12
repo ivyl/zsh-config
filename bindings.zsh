@@ -19,7 +19,6 @@ bindkey '^w' backward-kill-word
 autoload -U select-word-style
 select-word-style bash
 
-
 #ctrl-f edit current buffer in editor
 autoload -U edit-command-line
 zle -N edit-command-line

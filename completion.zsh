@@ -11,7 +11,7 @@ setopt list_types
 setopt complete_in_word
 unlimit
 
-pids4kill() {                                                                                                    
+pids4kill() {
     local -a ps
 
     if [[ $oldcontext = *:sudo:* ]]

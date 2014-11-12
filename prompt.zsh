@@ -13,10 +13,9 @@ precmd () {
     } else {
         zstyle ':vcs_info:*' formats "${at_normal} ${fg_dgray}%b%c%u${fg_red}!${at_normal}"
     }
- 
     vcs_info
 }
- 
+
 setopt prompt_subst
 
 
