@@ -26,6 +26,16 @@ pacwrap() {
     esac
 }
 
+function light()
+{
+    cd "$HOME/.i3"
+
+    case "$1" in
+        on)  cpp light.xresources | apply-colors-runtime; export LIGHT_MODE=on ;;
+        off) cpp dark.xresources  | apply-colors-runtime; unset LIGHT_MODE  ;;
+        *) echo "$0 on|off" ;;
+    esac
+}
 
 # HOOKS, INTERNALS, ETC
 autoload -U add-zsh-hook
