@@ -38,5 +38,8 @@ export PATH="$PATH:~/.perl5/bin";
 
 [ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
 
+[ -e ~/.fzf.zsh ] && . ~/.fzf.zsh
+
+
 # newly opened terminal should clean prompt
 true
