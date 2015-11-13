@@ -29,6 +29,7 @@ alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 #common arch aliases
 alias p="pacwrap"
 alias sc="systemctl"
+alias jc="journalctl"
 
 alias logs="sudo journalctl -f"
 
