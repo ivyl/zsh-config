@@ -21,7 +21,7 @@ setopt prompt_subst
 
 PROMPT="${at_bold}%m ${fg_red}%n ${fg_blue}%c\${vcs_info_msg_0_} %(?/${at_normal}/${fg_red})%%${at_normal} "
 
-INSERT_PROMPT="256"
+INSERT_PROMPT="14"
 COMMAND_PROMPT="1"
 
 set_prompt_color() {
