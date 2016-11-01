@@ -10,7 +10,7 @@ alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 
 #EDITORS
-alias e='vim'
+alias e='nvim'
 
 #COLORFULNESS
 alias grep="grep --colour"

@@ -34,8 +34,8 @@ PATH="$PATH:$HOME/.bin"
 
 
 #EDITORS
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 #PAGER
 export PAGER='less'
