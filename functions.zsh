@@ -26,7 +26,16 @@ pacwrap() {
     esac
 }
 
-function light()
+mkday()
+{
+    DIRNAME="$(date +'%Y%m%d')_$1"
+    echo $DIRNAME
+    mkdir $DIRNAME
+    cd $DIRNAME
+    cp /run/media/l1/disk/DCIM/*/*(.) .
+}
+
+light()
 {
     cd "$HOME/.i3"
 
