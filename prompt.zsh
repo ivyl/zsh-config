@@ -1,4 +1,4 @@
-. ~/.zsh/colors.zsh
+. $ZSH_CONFIG_DIR/colors.zsh
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' stagedstr "${fg_blue}?"

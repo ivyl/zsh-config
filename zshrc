@@ -7,14 +7,16 @@ if [ "$TERM" = "xterm" ]; then
   fi
 fi
 
+ZSH_CONFIG_DIR="$(dirname $(readlink -f $HOME/.zshrc))"
+
 [ -z "$PS1" ] && return
 
-. ~/.zsh/config.zsh
-. ~/.zsh/bindings.zsh
-. ~/.zsh/completion.zsh
-. ~/.zsh/functions.zsh
-. ~/.zsh/aliases.zsh
-. ~/.zsh/prompt.zsh
+. $ZSH_CONFIG_DIR/config.zsh
+. $ZSH_CONFIG_DIR/bindings.zsh
+. $ZSH_CONFIG_DIR/completion.zsh
+. $ZSH_CONFIG_DIR/functions.zsh
+. $ZSH_CONFIG_DIR/aliases.zsh
+. $ZSH_CONFIG_DIR/prompt.zsh
 
 [ -e  ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
