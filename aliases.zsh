@@ -11,6 +11,8 @@ alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 
 #EDITORS
 alias e='nvim'
+alias vim='nvim'
+alias vi='nvim'
 
 #COLORFULNESS
 alias grep="grep --colour"
