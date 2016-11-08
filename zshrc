@@ -41,7 +41,7 @@ export PATH="$PATH:~/.perl5/bin";
 GPG_TTY=$(tty)
 export GPG_TTY
 
-[ -e ~/.zsh/custom.zsh ] && . ~/.zsh/custom.zsh
+[ -e $ZSH_CONFIG_DIR/custom.zsh ] && . $ZSH_CONFIG_DIR/custom.zsh
 
 [ -e ~/.fzf.zsh ] && . ~/.fzf.zsh
 
