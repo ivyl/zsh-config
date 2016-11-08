@@ -30,7 +30,7 @@ if [ -x /etc/profile ]; then
 fi
 
 #PATH
-PATH="$PATH:$HOME/.bin"
+PATH="$PATH:$HOME/bin"
 
 
 #EDITORS
