@@ -9,9 +9,9 @@ zstyle ':vcs_info:*' enable git svn
 
 precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats "${at_normal} ${fg_dgray}%b%c%u${at_normal}"
+        zstyle ':vcs_info:*' formats "${fg_green} ${fg_noermal}%b%c%u${at_normal}"
     } else {
-        zstyle ':vcs_info:*' formats "${at_normal} ${fg_dgray}%b%c%u${fg_red}!${at_normal}"
+        zstyle ':vcs_info:*' formats "${fg_green} ${fg_normal}%b%c%u${fg_red}!${at_normal}"
     }
     vcs_info
 }
@@ -19,7 +19,7 @@ precmd () {
 setopt prompt_subst
 
 
-PROMPT="${at_bold}%m ${fg_red}%n ${fg_blue}%c\${vcs_info_msg_0_} %(?/${at_normal}/${fg_red})%%${at_normal} "
+PROMPT="${fg_white}%m ${fg_red}%n ${fg_blue}%c\${vcs_info_msg_0_} %(?/${fg_white}/${fg_red})%%${at_normal} "
 
 INSERT_PROMPT="14"
 COMMAND_PROMPT="1"
