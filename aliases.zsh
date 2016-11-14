@@ -35,3 +35,5 @@ alias jc="journalctl"
 
 alias uu="udiskie-umount"
 alias detach="udisks --detach"
+
+alias suspend="i3lock -c 282828 & sc suspend"
