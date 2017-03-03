@@ -32,7 +32,7 @@ mkday()
     echo $DIRNAME
     mkdir $DIRNAME
     cd $DIRNAME
-    cp /run/media/l1/disk/DCIM/*/*(.) .
+    cp /run/media/$USER/disk/DCIM/*/*(.) .
 }
 
 
