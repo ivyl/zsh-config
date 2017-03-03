@@ -29,8 +29,10 @@ if [ -x /etc/profile ]; then
     setopt +G
 fi
 
-#PATH
-PATH="$PATH:$HOME/bin"
+#PATHs
+export PATH="$PATH:$HOME/bin:$HOME/.config/local/bin"
+export MANPATH="$MANPATH:$HOME/.config/local/share/man"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.config/local/lib"
 
 
 #EDITORS
