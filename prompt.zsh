@@ -9,7 +9,7 @@ zstyle ':vcs_info:*' enable git svn
 
 precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats "${fg_green} ${fg_noermal}%b%c%u${at_normal}"
+        zstyle ':vcs_info:*' formats "${fg_green} ${fg_normal}%b%c%u${at_normal}"
     } else {
         zstyle ':vcs_info:*' formats "${fg_green} ${fg_normal}%b%c%u${fg_red}!${at_normal}"
     }
