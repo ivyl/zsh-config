@@ -1,9 +1,6 @@
 autoload -Uz compinit
 compinit
 
-# use pacman completion for pacwrap
-compdef '_dispatch pacman pacman' pacwrap
-
 # Get completion above command line
 setopt noalwayslastprompt
 setopt noauto_remove_slash

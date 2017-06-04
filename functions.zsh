@@ -18,14 +18,6 @@ lspath () {
         ls -ld "$allpaths[@]"
 }
 
-pacwrap() {
-    case "$1" in
-        -S|-Syu|-Su|-Ss|-Ssq|-Si|-G) packer $@ ;;
-        -R*|-U*|-S*) sudo pacman $@ ;;
-        *)   pacman $@ ;;
-    esac
-}
-
 mkday()
 {
     DIRNAME="$(date +'%Y%m%d')_$1"

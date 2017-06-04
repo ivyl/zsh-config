@@ -32,7 +32,6 @@ Want to override some configuration and still want updates? Put it in
 ### Usable functions
 * `zmv` enabled
 * `lspath` - show ls -ld for all dirs on path to given file
-* `pacwrap` - combines `pacman` and `packer`
 * few aliases (see `aliases.zsh`), e.g.:
   - `l` is `ls -lFh`
   - `la` is `l -A`
