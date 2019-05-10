@@ -27,6 +27,12 @@ mkday()
     cp /run/media/$USER/disk/DCIM/*/*(.) .
 }
 
+up() {
+    local name=$(uuidgen | cut -d- -f1)
+    ssh verne cat \> hiler.eu/p/$name
+    echo https://hiler.eu/p/$name
+}
+
 
 # HOOKS, INTERNALS, ETC
 autoload -U add-zsh-hook
