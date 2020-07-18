@@ -20,6 +20,9 @@ ZSH_CONFIG_DIR="$(dirname $(readlink -f $HOME/.zshrc))"
 
 [ -e  ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
+# do we have system ruby?
+>> /dev/null which gem && export PATH="$PATH:$(ruby -e "print Gem.user_dir")/bin"
+
 if [ -e  ~/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"

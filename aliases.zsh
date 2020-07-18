@@ -25,9 +25,6 @@ alias -g ...='../../'           #cd ...
 alias -g ....='../../../'       #cd ....
 alias -g .....='../../../../'   #cd .....
 
-#sprunge paste service
-alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-
 #common arch aliases
 alias sc="systemctl"
 alias jc="journalctl"

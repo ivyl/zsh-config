@@ -29,8 +29,8 @@ mkday()
 
 up() {
     local name=$(uuidgen | cut -d- -f1)
-    ssh verne cat \> hiler.eu/p/$name
-    echo https://hiler.eu/p/$name
+    ssh verne cat \> hiler.eu/p/$name.txt
+    echo https://hiler.eu/p/$name.txt
 }
 
 
