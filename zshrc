@@ -47,6 +47,8 @@ export GPG_TTY
 [ -e $ZSH_CONFIG_DIR/custom.zsh ] && . $ZSH_CONFIG_DIR/custom.zsh
 
 [ -e ~/.fzf.zsh ] && . ~/.fzf.zsh
+[ -e /usr/share/fzf/completion.zsh ] && . /usr/share/fzf/completion.zsh
+[ -e /usr/share/fzf/key-bindings.zsh ] && . /usr/share/fzf/key-bindings.zsh
 
 
 # newly opened terminal should clean prompt
