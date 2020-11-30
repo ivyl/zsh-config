@@ -14,7 +14,6 @@ fi
 
 #PATH
 export PATH="$PATH:$HOME/bin:$HOME/bin-priv:$HOME/.config/sway/bin"
-export MOZ_USE_OMTC=1
 
 # LOCAL CPAN
 export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:~/.perl5";
@@ -24,3 +23,5 @@ export PERL5LIB="~/.perl5/lib/perl5:$PERL5LIB";
 export PATH="$PATH:~/.perl5/bin";
 
 export MOZ_ENABLE_WAYLAND=1
+export MOZ_USE_OMTC=1
+export _JAVA_AWT_WM_NONREPARENTING=1
