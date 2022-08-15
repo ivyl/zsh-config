@@ -1,6 +1,6 @@
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' stagedstr "%{$fg[blue]%}?"
-zstyle ':vcs_info:*' unstagedstr "%{$fg[brown]%}?"
+zstyle ':vcs_info:*' unstagedstr "%{$fg[yellow]%}?"
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
 
