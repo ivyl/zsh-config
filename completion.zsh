@@ -25,6 +25,6 @@ zstyle ':completion:predict:*' completer _complete
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*' squeeze-slashes 'yes'
 zstyle ':completion:*:matches' group 'yes'
-zstyle ':completion:*:descriptions' format "$fg[yellow]%B---- %d%b"
-zstyle ':completion:*:messages' format "$fg[blue]%B---- %d%b"
-zstyle ':completion:*:warnings' format "$fg[red]%B---- no match for:${reset_color} %d%b"
+zstyle ':completion:*:descriptions' format "%{$fg[yellow]%}%B---- %d%b%{${reset_color}%}"
+zstyle ':completion:*:messages' format "%{$fg[blue]%}%B---- %d%b%{${reset_color}%}"
+zstyle ':completion:*:warnings' format "%{$fg[red]%}%B---- no match for:%b%{${reset_color}%} %d"
