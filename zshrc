@@ -8,9 +8,6 @@ ZSH_CONFIG_DIR="$(dirname $(readlink -f $HOME/.zshrc))"
 
 [ -e $ZSH_CONFIG_DIR/custom.zsh ] && . $ZSH_CONFIG_DIR/custom.zsh
 
-# local Ruby Gems
->> /dev/null which gem && export PATH="$PATH:$(ruby -e "print Gem.user_dir")/bin"
-
 # FZF
 [ -e ~/.fzf.zsh ] && . ~/.fzf.zsh
 [ -e /usr/share/fzf/completion.zsh ] && . /usr/share/fzf/completion.zsh
