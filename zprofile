@@ -1,26 +1,16 @@
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
-if [ -e  ~/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+export EDITOR='nvim'
+export VISUAL='nvim'
+export DIFFPROG='nvim -d'
 
-#LOAD PROFILE
 if [ -x /etc/profile ]; then
     setopt -G
     . /etc/profile
     setopt +G
 fi
 
-#PATH
-export PATH="$PATH:$HOME/bin:$HOME/bin-priv:$HOME/.config/sway/bin"
-
-# LOCAL CPAN
-export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:~/.perl5";
-export PERL_MB_OPT="--install_base ~/.perl5";
-export PERL_MM_OPT="INSTALL_BASE=~/.perl5";
-export PERL5LIB="~/.perl5/lib/perl5:$PERL5LIB";
-export PATH="$PATH:~/.perl5/bin";
+export PATH="$PATH:$HOME/bin:$HOME/.config/sway/bin"
 
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_USE_OMTC=1

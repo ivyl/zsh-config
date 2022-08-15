@@ -1,43 +1,25 @@
 #HISTORY
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1717
+HISTSIZE=2000
+SAVEHIST=1500
 
-setopt inc_append_history
-setopt extended_history
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
-setopt hist_verify
-setopt hist_allow_clobber
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
 
-#ZSH OPTS
-setopt noclobber
-setopt extendedglob
-setopt correct
-setopt autolist
-setopt auto_resume
-setopt short_loops #for file in *.pdf; lp ${file}
+setopt HIST_VERIFY
 
-unset beep
-set nobeep
+setopt HIST_ALLOW_CLOBBER
+setopt NO_CLOBBER
 
-#LOAD PROFILE
-if [ -x /etc/profile ]; then
-    setopt -G
-    . /etc/profile
-    setopt +G
-fi
+setopt CORRECT
+setopt AUTO_LIST
+setopt AUTO_RESUME
+setopt SHORT_LOOPS #for file in *.pdf; lp ${file}
 
-#PATHs
-export PATH="$PATH:$HOME/bin:$HOME/.config/local/bin"
-export MANPATH="$MANPATH:$HOME/.config/local/share/man"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.config/local/lib"
-
-
-#EDITORS
-export EDITOR='nvim'
-export VISUAL='nvim'
+set NOBEEP
 
 #PAGER
 export PAGER='less'
@@ -51,6 +33,9 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export GROFF_NO_SGR=yes
 
-#loading functions
-autoload -Uz zmv
-
+# bell when terminal is ready
+autoload -U add-zsh-hook
+bell_precmd() {
+    echo -ne "\a"
+}
+add-zsh-hook precmd bell_precmd
