@@ -16,7 +16,7 @@ precmd () {
 autoload -U colors && colors
 setopt prompt_subst
 
-PROMPT="%{$fg[white]%}%m %{$fg[red]%}%n %{$fg[blue]%}%c\${vcs_info_msg_0_} %(?/%{$fg[white]%}/%{$fg[red]%})%%${reset_color} "
+PROMPT="%{$fg[white]%}%m %{$fg[red]%}%n %{$fg[blue]%}%c\${vcs_info_msg_0_} %(?/%{$fg[white]%}/%{$fg[red]%})%%%{${reset_color}%} "
 
 INSERT_PROMPT='\033[6 q'
 COMMAND_PROMPT='\033[2 q'
