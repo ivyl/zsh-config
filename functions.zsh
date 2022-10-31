@@ -62,5 +62,7 @@ up() {
         ssh verne cat \> hiler.eu/$place/$name.$ext
     fi
 
+    ssh verne chmod 644 hiler.eu/$place/$name.$ext
+
     echo https://ivyl.gg/$place/$name.$ext
 }
