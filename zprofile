@@ -10,7 +10,7 @@ if [ -x /etc/profile ]; then
     setopt +G
 fi
 
-export PATH="$PATH:$HOME/bin:$HOME/.config/sway/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.config/sway/bin:$HOME/.cargo/bin"
 
 # local Ruby Gems
 >> /dev/null which gem && export PATH="$PATH:$(ruby -e "print Gem.user_dir")/bin"
